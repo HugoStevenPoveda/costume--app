@@ -1,0 +1,1 @@
+let URL_CLIENTE = "https://gedf051d40d5c36-db202109221902.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client";

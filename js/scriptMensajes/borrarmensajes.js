@@ -14,7 +14,7 @@ function borrarRegistro(llaveRegistro) {
 
     $.ajax({
         // la URL para la petición (url: "url al recurso o endpoint")
-        url: "https://g2c7d8c8e491995-db202109201320.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message",
+        url: URL_MENSAJES,
 
         // la información a enviar
         // (también es posible utilizar una cadena de datos)
