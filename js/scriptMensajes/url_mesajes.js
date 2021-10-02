@@ -1,1 +1,1 @@
-URL_MENSAJES= "https://gedf051d40d5c36-db202109221902.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message";
+URL_MENSAJES= "https://g50c4b7e401c7c7-db202109221901.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message";
