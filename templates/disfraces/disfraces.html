@@ -18,6 +18,13 @@
     />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="./../../css/styles.css" rel="stylesheet" />
+    <!--SCRIPTS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/scriptDisfraces/listar.js"></script>
+    <script src="/js/scriptDisfraces/registrar.js"></script>
+    <script src="/js/scriptDisfraces/editar.js"></script>
+    <script src="/js/scriptDisfraces/borrar.js"></script>
+    <script src="/js/scriptDisfraces/funciones.js"></script>
   </head>
   <body>
     <!-- Navigation-->
@@ -49,35 +56,46 @@
       </div>
     </nav>
  
-   <!-- Section-->
-    <section class="py-5">
-      <div class="container px-4 px-lg-5 mt-5" 
-      id="resultado" 
-       >
-        <div 
-          class="
-            row
-            gx-4 gx-lg-5
-            row-cols-2 row-cols-md-3 row-cols-xl-4
-            justify-content-center
-          "
-          
-           
-        >
+  <!--CUERPO-->
+  <div>
+    <h1>Disfraces Disponibles</h1>
 
-
-      <!--CONTENIDO-->
-       <div>
-<h1>Disfraces</h1>
-
-       </div>
+    <!-- en el elemento identificado con el id 'mensajes' se mostraran los mensajes
+         o resultado de ejecutar la peticion
+    -->
+    <div id="mensajes"></div>
+    <br>
     
-       
-     
+    <button id="nuevoRegistro" onclick="activaNuevo();">Registrar Disfraz</button>
+    <!--aqui se actualizara el listado -->
+    <div id="listado"></div>
+
+    <!-- Seccion para nuevos registros-->
+    <div id="nuevo">
+        <h3>Registrar Disfraz</h3>
+        <input type="number" id="id" placeholder="id">
+        <input type="text" id="name" placeholder="name">
+        <input type="text" id="brand" placeholder="brand">
+        <input type="number" id="model" placeholder="model">
+        <input type="number" id="category" placeholder="category_id">
+        <button onclick="registrar();">Guardar</button>
+        <button onclick="estadoInicial();">Cancelar</button>
+    </div>
 
 
-           
-    </section>
+    <!-- Seccion para editar registros-->
+    <div id="editar">
+        <h3>Editar Disfraz</h3>
+        <input type="number" id="idEdit" placeholder="id">
+        <input type="text" id="nameEdit" placeholder="name">
+        <input type="text" id="brandEdit" placeholder="brand">
+        <input type="number" id="modelEdit" placeholder="model">
+        <input type="number" id="categoryEdit" placeholder="category_id">
+        <button onclick="actualizar();">Guardar</button>
+        <button onclick="estadoInicial();">Cancelar</button>
+    </div>
+    
+</div>
    
   </body>
 </html>
