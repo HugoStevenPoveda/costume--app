@@ -31,7 +31,7 @@ function borrarRegistro(llaveRegistro) {
 
         // código a ejecutar si la petición es satisfactoria;
         // la respuesta es pasada como argumento a la función
-        success: function (respuesta) {
+        success:  (respuesta)=> {
             //escribe en la consola del desarrollador para efectos de depuración
             console.log(respuesta);
             $("#mensajes").show(1000);
@@ -43,7 +43,7 @@ function borrarRegistro(llaveRegistro) {
         // código a ejecutar si la petición falla;
         // son pasados como argumentos a la función
         // el objeto de la petición en crudo y código de estatus de la petición
-        error: function (xhr, status) {
+        error:  (status)=> {
             $("#mensajes").html("Ocurrio un problema al ejecutar la petición..." + status);
             $("#mensajes").hide(1000);
         }

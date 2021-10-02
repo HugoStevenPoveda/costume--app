@@ -40,8 +40,8 @@ function registrar() {
                 $("#mensajes").show(1000);
                 $("#mensajes").html("Registro ingresado...");
                 $("#mensajes").hide(1000);
-                listar();
-                estadoInicial();
+            
+               
             },
     
             // código a ejecutar si la petición falla;
