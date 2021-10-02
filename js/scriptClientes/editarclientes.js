@@ -13,7 +13,7 @@ function editarRegistro(llaveRegistro) {
 
     $.ajax({
         // la URL para la petición (url: "url al recurso o endpoint")
-        url: URL_CLIENTE + llaveRegistro,
+        url: URL_CLIENTE + "/"+llaveRegistro,
 
         // la información a enviar
         // (también es posible utilizar una cadena de datos)
