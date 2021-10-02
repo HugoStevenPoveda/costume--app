@@ -18,6 +18,16 @@
     />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="./../../css/styles.css" rel="stylesheet" />
+
+        <!--
+    <script src="js/jquery-3.6.0.min.js"></script>
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/scriptMensajes/listarmensajes.js"></script>
+    <script src="/js/scriptMensajes/registrarmensajes.js"></script>
+    <script src="/js/scriptMensajes/editarmensajes.js"></script>
+    <script src="/js/scriptMensajes/borrarmensajes.js"></script>
+    <script src="/js/scriptMensajes/funcionesmensajes.js"></script>
   </head>
   <body>
     <!-- Navigation-->
@@ -48,36 +58,47 @@
         </div>
       </div>
     </nav>
- 
-   <!-- Section-->
-    <section class="py-5">
-      <div class="container px-4 px-lg-5 mt-5" 
-      id="resultado" 
-       >
-        <div 
-          class="
-            row
-            gx-4 gx-lg-5
-            row-cols-2 row-cols-md-3 row-cols-xl-4
-            justify-content-center
-          "
-          
-           
-        >
 
+    <div>
+      <h1>Mensajes Disponibles</h1>
 
-      <!--CONTENIDO-->
-       <div>
-<h1>Mensajes</h1>
-
-       </div>
-    
-       
+      <!-- en el elemento identificado con el id 'mensajes' se mostraran los mensajes
+           o resultado de ejecutar la peticion
+      -->
+      <div id="mensajes"></div>
+      <br>
      
+      
+      <button id="nuevoRegistro" onclick="activaNuevo();">Registrar Mensaje</button>
+      <!--aqui se actualizara el listado -->
+      <div id="listado"></div>
+
+      <!-- Seccion para nuevos registros-->
+      <div id="nuevo">
+          <h3>Registrar Mensaje</h3>
+          <input type="number" id="id" placeholder="id">
+          <br>
+          <textarea id="messagetext" placeholder="messagetext" rows="4" cols="50"></textarea>
+          <br>
+          <button onclick="registrar();">Guardar</button>
+          <button onclick="estadoInicial();">Cancelar</button>
+      </div>
 
 
-           
-    </section>
+      <!-- Seccion para editar registros-->
+      <div id="editar">
+          <h3>Editar Mensaje</h3>
+          <input type="number" id="idEdit" placeholder="id">
+          <br>
+          <textarea id="messagetextEdit" placeholder="messagetext" rows="4" cols="50"></textarea>
+          <br>
+          <button onclick="actualizar();">Guardar</button>
+          <button onclick="estadoInicial();">Cancelar</button>
+      </div>
+      
+  </div>
+ 
+   
    
   </body>
 </html>
