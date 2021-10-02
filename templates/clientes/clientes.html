@@ -59,6 +59,8 @@
             <li class="nav-item"><a class="nav-link" href="#!">Clientes</a></li>
             <li class="nav-item"><a class="nav-link" href="./crearCliente.html">Agregar Clientes</a></li>
           </ul>
+            
+          </ul>
         </div>
       </div>
     </nav>
@@ -66,42 +68,121 @@
    
     <div>
       <h1>Clientes Disponibles</h1>
-
-      <!-- en el elemento identificado con el id 'mensajes' se mostraran los mensajes
-           o resultado de ejecutar la peticion
-      -->
-      <div id="mensajes"></div>
-      <br>
      
-      
-      <button id="nuevoRegistro" onclick="activaNuevo();">Registrar Cliente</button>
       <!--aqui se actualizara el listado -->
       <div id="listado"></div>
 
-      <!-- Seccion para nuevos registros-->
-      <div id="nuevo">
-          <h3>Registrar Cliente</h3>
-          <input type="number" id="id" placeholder="id">
-          <input type="text" id="name" placeholder="name">
-          <input type="email" id="email" placeholder="email">
-          <input type="number" id="age" placeholder="age">
-          <button onclick="registrar();">Guardar</button>
-          <button onclick="estadoInicial();">Cancelar</button>
-      </div>
-
-
       <!-- Seccion para editar registros-->
-      <div id="editar">
-          <h3>Editar Cliente</h3>
-          <input type="number" id="idEdit" placeholder="id">
-          <input type="text" id="nameEdit" placeholder="name">
-          <input type="text" id="emailEdit" placeholder="email">
-          <input type="number" id="ageEdit" placeholder="age">
-          <button onclick="actualizar();">Guardar</button>
-          <button onclick="estadoInicial();">Cancelar</button>
+     
+
+      <div class="container">
+        <div class="row" id="editar" >
+          <div class="col">
+            <!--  permite centrar el forms div derecho-->
+          </div>
+          <div class="col-6">
+            <h3>Editar Cliente</h3>
+            <form>
+              <!-- espacio para id y age-->
+              <div class="form-group">
+                <!-- fila para los campos  id y age-->
+                <div class="row">
+                  <div class="col">
+                    <label>Id</label>
+                    <input
+                      type="number"
+                      min="0"
+                      class="form-control"
+                      placeholder="Id"
+                      id="idEdit"
+                    />
+                  </div>
+                  <div class="col">
+                    <label>Age</label>
+                    <input
+                      type="number"
+                      min="0"
+                      class="form-control"
+                      placeholder="Age"
+                      id="ageEdit"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- fila para los campo name-->
+              <div class="form-group">
+                <label>Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Name"
+                  id="nameEdit"
+                />
+              </div>
+              <!-- fila para los campo email-->
+              <div class="form-group">
+                <label>Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  id="emailEdit"
+                />
+              </div>
+              <!-- fila PARA BOTONES-->
+              <div class="form-group">
+                <label> </label>
+                <div class="row">
+                  <div class="col">
+                    <a
+                      onclick="actualizar();"
+                      class="btn btn-primary btn-lg active"
+                      role="button"
+                      aria-pressed="true"
+                      >Guardar</a
+                    >
+                  </div>
+                  <div class="col">
+                    <a
+                       onclick="estadoInicial();"
+                    
+                      class="btn btn-primary btn-lg active"
+                      role="button"
+                      aria-pressed="true"
+                      >Cancelar</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- fila ALERTA-->
+              <div class="form-group">
+                <label> </label>
+                <div class="row" >
+                  <!-- en el elemento identificado con el id 'mensajes' se mostraran los mensajes
+           o resultado de ejecutar la peticion
+      -->
+                 
+                  <div
+                    id="mensajes"
+                   
+                  >
+                  
+                    
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
+          <div class="col">
+            <!--  permite centrar el forms div Isquierda-->
+          </div>
+        </div>
+
       </div>
       
-  </div>
+    </div>
     <!--scripts -->
 
      <!--permite funcionalida de botones-->
