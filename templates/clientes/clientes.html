@@ -59,6 +59,8 @@
             <li class="nav-item"><a class="nav-link" href="#!">Clientes</a></li>
             <li class="nav-item"><a class="nav-link" href="./crearCliente.html">Agregar Clientes</a></li>
           </ul>
+            
+          </ul>
         </div>
       </div>
     </nav>
@@ -73,35 +75,25 @@
       <div id="mensajes"></div>
       <br>
      
-      
-      <button id="nuevoRegistro" onclick="activaNuevo();">Registrar Cliente</button>
+     
       <!--aqui se actualizara el listado -->
       <div id="listado"></div>
 
-      <!-- Seccion para nuevos registros-->
-      <div id="nuevo">
-          <h3>Registrar Cliente</h3>
-          <input type="number" id="id" placeholder="id">
-          <input type="text" id="name" placeholder="name">
-          <input type="email" id="email" placeholder="email">
-          <input type="number" id="age" placeholder="age">
-          <button onclick="registrar();">Guardar</button>
-          <button onclick="estadoInicial();">Cancelar</button>
-      </div>
-
-
       <!-- Seccion para editar registros-->
-      <div id="editar">
-          <h3>Editar Cliente</h3>
-          <input type="number" id="idEdit" placeholder="id">
-          <input type="text" id="nameEdit" placeholder="name">
-          <input type="text" id="emailEdit" placeholder="email">
-          <input type="number" id="ageEdit" placeholder="age">
-          <button onclick="actualizar();">Guardar</button>
-          <button onclick="estadoInicial();">Cancelar</button>
-      </div>
+     
+
+          <!-- Seccion para editar registros-->
+          <div id="editar">
+            <h3>Editar Cliente</h3>
+            <input type="number" id="idEdit" placeholder="id">
+            <input type="text" id="nameEdit" placeholder="name">
+            <input type="text" id="emailEdit" placeholder="email">
+            <input type="number" id="ageEdit" placeholder="age">
+            <button onclick="actualizar();">Guardar</button>
+            <button onclick="estadoInicial();">Cancelar</button>
+        </div>
       
-  </div>
+    </div>
     <!--scripts -->
 
      <!--permite funcionalida de botones-->
